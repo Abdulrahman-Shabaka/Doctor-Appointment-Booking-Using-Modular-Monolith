@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AppointmentBooking\AppointmentBooking.csproj" />
     <ProjectReference Include="..\AppointmentConfirmation\AppointmentConfirmation.csproj" />
     <ProjectReference Include="..\DoctorAppointmentManagement\DoctorAppointmentManagement.csproj" />
