@@ -15,10 +15,12 @@ internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper
         return mapper.Map<List<SlotResponse>>(slots);
     }
 
-    public async Task<bool> IsSlotAvailableAsync(Guid id)
+    public async Task IsSlotAvailableAsync(Guid id)
     {
         var slot = await FindSlotAsync(id);
-        return !mapper.Map<SlotResponse>(slot).IsReserved;
+
+        if (slot == null || slot.IsReserved)
+            throw new InvalidOperationException("Slot is already reserved or doesn't exist.");
     }
 
     public async Task AddSlotAsync(AddSlotRequest request)

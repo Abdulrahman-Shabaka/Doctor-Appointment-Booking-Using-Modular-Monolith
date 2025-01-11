@@ -6,7 +6,7 @@ namespace DoctorAvailability.Public.Interfaces;
 public interface IDoctorAvailabilityService
 {
     Task<List<SlotResponse>> GetAvailableSlotsAsync();
-    Task<bool> IsSlotAvailableAsync(Guid id);
+    Task IsSlotAvailableAsync(Guid id);
     Task AddSlotAsync(AddSlotRequest request);
     Task ReserveSlotAsync(Guid id);
 }
