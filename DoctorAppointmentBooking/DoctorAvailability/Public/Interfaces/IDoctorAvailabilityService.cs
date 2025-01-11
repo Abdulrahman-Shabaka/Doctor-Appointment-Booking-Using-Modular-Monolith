@@ -8,4 +8,5 @@ public interface IDoctorAvailabilityService
     Task<List<SlotResponse>> GetAvailableSlotsAsync();
     Task<SlotResponse> GetSlotByIdAsync(Guid id);
     Task AddSlotAsync(AddSlotRequest request);
+    Task ReserveSlotAsync(Guid id);
 }
