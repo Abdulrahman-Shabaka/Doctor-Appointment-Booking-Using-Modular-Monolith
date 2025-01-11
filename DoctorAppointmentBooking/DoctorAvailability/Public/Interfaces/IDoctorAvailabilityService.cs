@@ -1,4 +1,4 @@
-﻿using DoctorAvailability.Public.Requests;
+﻿using DoctorAvailability.Public.DTOs.Requests;
 using DoctorAvailability.Public.Response;
 
 namespace DoctorAvailability.Public.Interfaces;

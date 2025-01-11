@@ -1,7 +1,6 @@
 ﻿using AppointmentBooking.Internal.Domain.Models;
-using AppointmentBooking.Public.Requests;
-using AppointmentBooking.Public.Responses;
-
+using AppointmentBooking.Public.DTOs.Requests;
+using AppointmentBooking.Public.DTOs.Responses;
 using AutoMapper;
 
 namespace AppointmentBooking.Internal.Infrastructure.Mappers;

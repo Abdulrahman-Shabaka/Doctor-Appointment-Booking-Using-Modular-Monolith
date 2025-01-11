@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 
 using DoctorAvailability.Internal.Models;
+using DoctorAvailability.Public.DTOs.Requests;
 using DoctorAvailability.Public.Interfaces;
-using DoctorAvailability.Public.Requests;
 using DoctorAvailability.Public.Response;
-
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace DoctorAvailability.Internal.Services;
 

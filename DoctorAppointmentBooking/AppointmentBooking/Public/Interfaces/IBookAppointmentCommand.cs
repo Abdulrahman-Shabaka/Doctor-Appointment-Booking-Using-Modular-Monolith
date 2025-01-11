@@ -1,5 +1,5 @@
-﻿using AppointmentBooking.Public.Requests;
-using AppointmentBooking.Public.Responses;
+﻿using AppointmentBooking.Public.DTOs.Requests;
+using AppointmentBooking.Public.DTOs.Responses;
 
 namespace AppointmentBooking.Public.Interfaces;
 

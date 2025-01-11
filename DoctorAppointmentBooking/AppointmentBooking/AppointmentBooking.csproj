@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Public\Events\" />
       <Folder Include="Internal\Application\UseCases\Commands\" />
       <Folder Include="Internal\Domain\Models\" />
       <Folder Include="Public\API\" />
@@ -21,6 +22,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DoctorAvailability\DoctorAvailability.csproj" />
+      <ProjectReference Include="..\Kernel\Kernel.csproj" />
     </ItemGroup>
 
 </Project>

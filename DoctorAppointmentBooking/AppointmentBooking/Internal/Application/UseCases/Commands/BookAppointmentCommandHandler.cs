@@ -1,22 +1,27 @@
 ﻿using AppointmentBooking.Internal.Domain.Interfaces;
 using AppointmentBooking.Internal.Domain.Models;
+using AppointmentBooking.Public.DTOs.Requests;
+using AppointmentBooking.Public.DTOs.Responses;
+using AppointmentBooking.Public.Events;
 using AppointmentBooking.Public.Interfaces;
-using AppointmentBooking.Public.Requests;
-using AppointmentBooking.Public.Responses;
+
 using AutoMapper;
+
 using DoctorAvailability.Public.Interfaces;
+
+using SharedKernel.Events;
 
 namespace AppointmentBooking.Internal.Application.UseCases.Commands;
 
 internal class BookAppointmentCommandHandler(
     IAppointmentRepository appointmentRepository,
     IDoctorAvailabilityService doctorAvailabilityService,
-    IMapper mapper) : IBookAppointmentCommand
+    IMapper mapper,
+    EventDispatcher eventDispatcher) : IBookAppointmentCommand
 {
     public async Task<AppointmentResponse> ExecuteAsync(BookAppointmentRequest request)
     {
-        await doctorAvailabilityService.ValidateSlotAvailabilityAsync(request.SlotId);
-
+        var slot = await doctorAvailabilityService.GetSlotIfAvailableAsync(request.SlotId);
 
         var appointment = mapper.Map<Appointment>(request);
 
@@ -25,6 +30,17 @@ internal class BookAppointmentCommandHandler(
         await appointmentRepository.SaveChangesAsync();
 
         await doctorAvailabilityService.ReserveSlotAsync(request.SlotId);
+
+        var @event = new AppointmentBookedEvent(
+            appointment.Id,
+            appointment.SlotId,
+            appointment.PatientId,
+            appointment.PatientName,
+            slot.Time,
+            slot.DoctorName
+        );
+
+        eventDispatcher.Dispatch(@event);
 
         return mapper.Map<AppointmentResponse>(appointment);
     }

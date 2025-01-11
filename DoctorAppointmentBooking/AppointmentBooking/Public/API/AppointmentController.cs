@@ -1,6 +1,6 @@
-﻿using AppointmentBooking.Public.Interfaces;
-using AppointmentBooking.Public.Requests;
-using AppointmentBooking.Public.Responses;
+﻿using AppointmentBooking.Public.DTOs.Requests;
+using AppointmentBooking.Public.DTOs.Responses;
+using AppointmentBooking.Public.Interfaces;
 
 using DoctorAvailability.Public.Response;
 
