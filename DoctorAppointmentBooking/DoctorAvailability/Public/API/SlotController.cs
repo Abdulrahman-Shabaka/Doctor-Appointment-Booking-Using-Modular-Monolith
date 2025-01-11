@@ -13,9 +13,9 @@ namespace DoctorAvailability.Public.API;
 public class DoctorAvailabilitiesController(IDoctorAvailabilityService doctorAvailabilityService, IMapper mapper) : ControllerBase
 {
     [HttpGet("available")]
-    public async Task<ActionResult<List<SlotResponse>>> GetAvailableSlots()
+    public async Task<ActionResult<List<SlotResponse>>> GetAllSlots()
     {
-        var slots = await doctorAvailabilityService.GetAvailableSlotsAsync();
+        var slots = await doctorAvailabilityService.GetSlotsAsync();
         return Ok(slots);
     }
 

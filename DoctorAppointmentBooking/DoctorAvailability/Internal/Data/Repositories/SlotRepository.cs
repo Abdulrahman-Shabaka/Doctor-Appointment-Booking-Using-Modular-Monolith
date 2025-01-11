@@ -6,7 +6,12 @@ namespace DoctorAvailability.Internal.Data.Repositories;
 
 internal class SlotRepository(DoctorAvailabilityDbContext context) : ISlotRepository
 {
-    public async Task<List<Slot>> GetAvailableSlotsAsync()
+    public async Task<List<Slot?>> GetAllSlotsAsync()
+    {
+        return await context.Slots.ToListAsync();
+    }
+
+    public async Task<List<Slot?>> GetAvailableSotsAsync()
     {
         return await context.Slots
             .Where(s => !s.IsReserved)

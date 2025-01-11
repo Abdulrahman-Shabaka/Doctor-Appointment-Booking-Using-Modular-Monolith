@@ -9,13 +9,19 @@ namespace DoctorAvailability.Internal.Services;
 
 internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper mapper) : IDoctorAvailabilityService
 {
-    public async Task<List<SlotResponse>> GetAvailableSlotsAsync()
+    public async Task<List<SlotResponse>> GetSlotsAsync()
     {
-        var slots = await slotRepository.GetAvailableSlotsAsync();
+        var slots = await slotRepository.GetAllSlotsAsync();
         return mapper.Map<List<SlotResponse>>(slots);
     }
 
-    public async Task ValidateSlotAVailabilityAsync(Guid id)
+    public async Task<List<SlotResponse>> GetAvailableSlotsAsync()
+    {
+        var slots = await slotRepository.GetAvailableSotsAsync();
+        return mapper.Map<List<SlotResponse>>(slots);
+    }
+
+    public async Task ValidateSlotAvailabilityAsync(Guid id)
     {
         var slot = await FindSlotAsync(id);
 
