@@ -1,4 +1,7 @@
 using AppointmentBooking;
+
+using AppointmentConfirmation;
+
 using DoctorAvailability;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDoctorAvailabilityModule();
 builder.Services.AddAppointmentBookingModule();
+builder.Services.AddAppointConfirmationModule();
 
 var app = builder.Build();
 

@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Internal\Services\" />
+      <Folder Include="Public\Interfaces\" />
+      <Folder Include="Public\Requests\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AppointmentBooking\AppointmentBooking.csproj" />
+    </ItemGroup>
+
 </Project>
