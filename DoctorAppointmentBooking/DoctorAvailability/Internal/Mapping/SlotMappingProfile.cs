@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 
-using DoctorAvailability.Internal.Domain.Slots;
+using DoctorAvailability.Internal.Models;
 using DoctorAvailability.Public.Requests;
 using DoctorAvailability.Public.Response;
 
-namespace DoctorAvailability.Internal.Infrastructure.Mapping;
+namespace DoctorAvailability.Internal.Mapping;
 
 internal class SlotMappingProfile : Profile
 {

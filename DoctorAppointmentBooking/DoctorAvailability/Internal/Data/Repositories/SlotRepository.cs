@@ -1,8 +1,8 @@
-﻿using DoctorAvailability.Internal.Domain.Slots;
+﻿using DoctorAvailability.Internal.Models;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace DoctorAvailability.Internal.Infrastructure.Persistence.Repositories;
+namespace DoctorAvailability.Internal.Data.Repositories;
 
 internal class SlotRepository(DoctorAvailabilityDbContext context) : ISlotRepository
 {

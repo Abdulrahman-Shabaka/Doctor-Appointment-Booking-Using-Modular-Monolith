@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DoctorAvailability.Public.API;
 
 [ApiController]
-[Route("api/slots")]
+[Route("api/doctor-availabilities")]
 public class DoctorAvailabilitiesController(IDoctorAvailabilityService doctorAvailabilityService, IMapper mapper) : ControllerBase
 {
     [HttpGet("available")]

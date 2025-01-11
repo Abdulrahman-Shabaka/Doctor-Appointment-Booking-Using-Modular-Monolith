@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 
-using DoctorAvailability.Internal.Domain.Slots;
+using DoctorAvailability.Internal.Models;
 using DoctorAvailability.Public.Interfaces;
 using DoctorAvailability.Public.Requests;
 using DoctorAvailability.Public.Response;
 
-namespace DoctorAvailability.Internal.Application.Services;
+namespace DoctorAvailability.Internal.Services;
 
 internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper mapper) : IDoctorAvailabilityService
 {

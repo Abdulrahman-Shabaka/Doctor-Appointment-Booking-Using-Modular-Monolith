@@ -1,7 +1,7 @@
-﻿using DoctorAvailability.Internal.Application.Services;
-using DoctorAvailability.Internal.Domain.Slots;
-using DoctorAvailability.Internal.Infrastructure.Persistence;
-using DoctorAvailability.Internal.Infrastructure.Persistence.Repositories;
+﻿using DoctorAvailability.Internal.Data;
+using DoctorAvailability.Internal.Data.Repositories;
+using DoctorAvailability.Internal.Models;
+using DoctorAvailability.Internal.Services;
 using DoctorAvailability.Public.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
