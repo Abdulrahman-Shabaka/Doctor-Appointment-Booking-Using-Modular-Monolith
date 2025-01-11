@@ -15,7 +15,7 @@ internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper
         return mapper.Map<List<SlotResponse>>(slots);
     }
 
-    public async Task IsSlotAvailableAsync(Guid id)
+    public async Task ValidateSlotAVailabilityAsync(Guid id)
     {
         var slot = await FindSlotAsync(id);
 
