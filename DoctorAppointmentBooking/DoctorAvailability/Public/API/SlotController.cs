@@ -12,7 +12,7 @@ namespace DoctorAvailability.Public.API;
 [Route("api/doctor-availabilities")]
 public class DoctorAvailabilitiesController(IDoctorAvailabilityService doctorAvailabilityService, IMapper mapper) : ControllerBase
 {
-    [HttpGet("available")]
+    [HttpGet]
     public async Task<ActionResult<List<SlotResponse>>> GetAllSlots()
     {
         var slots = await doctorAvailabilityService.GetSlotsAsync();
