@@ -6,5 +6,5 @@ namespace DoctorAvailability.Internal.Data;
 
 internal class DoctorAvailabilityDbContext(DbContextOptions<DoctorAvailabilityDbContext> options) : DbContext(options)
 {
-    public DbSet<Slot> Slots { get; set; }
+    public DbSet<Slot?> Slots { get; set; }
 }

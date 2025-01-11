@@ -13,6 +13,11 @@ internal class SlotRepository(DoctorAvailabilityDbContext context) : ISlotReposi
             .ToListAsync();
     }
 
+    public async Task<Slot?> GetSlotByIdAsync(Guid id)
+    {
+        return await context.Slots.FindAsync(id);
+    }
+
     public async Task AddSlotAsync(Slot slot)
     {
         await context.AddAsync(slot);
