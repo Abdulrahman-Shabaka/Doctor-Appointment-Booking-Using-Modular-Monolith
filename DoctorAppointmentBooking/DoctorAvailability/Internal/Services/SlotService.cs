@@ -5,6 +5,8 @@ using DoctorAvailability.Public.Interfaces;
 using DoctorAvailability.Public.Requests;
 using DoctorAvailability.Public.Response;
 
+using static System.Reflection.Metadata.BlobBuilder;
+
 namespace DoctorAvailability.Internal.Services;
 
 internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper mapper) : IDoctorAvailabilityService
@@ -21,12 +23,14 @@ internal class DoctorAvailabilityService(ISlotRepository slotRepository, IMapper
         return mapper.Map<List<SlotResponse>>(slots);
     }
 
-    public async Task ValidateSlotAvailabilityAsync(Guid id)
+    public async Task<SlotResponse> GetSlotIfAvailableAsync(Guid id)
     {
         var slot = await FindSlotAsync(id);
 
         if (slot == null || slot.IsReserved)
             throw new InvalidOperationException("Slot is already reserved or doesn't exist.");
+
+        return mapper.Map<SlotResponse>(slot);
     }
 
     public async Task AddSlotAsync(AddSlotRequest request)
