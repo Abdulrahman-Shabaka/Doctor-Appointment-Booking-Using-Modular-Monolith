@@ -1,3 +1,4 @@
+using AppointmentBooking;
 using DoctorAvailability;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDoctorAvailabilityModule();
+builder.Services.AddAppointmentBookingModule();
 
 var app = builder.Build();
 
