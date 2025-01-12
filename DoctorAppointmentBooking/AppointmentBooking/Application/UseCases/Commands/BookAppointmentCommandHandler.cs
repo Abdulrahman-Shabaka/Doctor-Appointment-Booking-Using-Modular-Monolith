@@ -6,9 +6,7 @@ using AppointmentBooking.Domain.Interfaces;
 using AppointmentBooking.Domain.Models;
 
 using AutoMapper;
-
-using DoctorAvailability.Public.Interfaces;
-
+using DoctorAvailability.Shared.Interfaces;
 using SharedKernel.Events;
 
 namespace AppointmentBooking.Application.UseCases.Commands;

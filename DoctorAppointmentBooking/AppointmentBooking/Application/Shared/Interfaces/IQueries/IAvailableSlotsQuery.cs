@@ -1,4 +1,4 @@
-﻿using DoctorAvailability.Public.DTOs.Response;
+﻿using DoctorAvailability.Shared.DTOs.Response;
 
 namespace AppointmentBooking.Application.Shared.Interfaces.IQueries;
 

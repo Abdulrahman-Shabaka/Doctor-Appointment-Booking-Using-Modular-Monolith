@@ -2,8 +2,7 @@
 using AppointmentBooking.Application.Shared.DTOs.Responses;
 using AppointmentBooking.Application.Shared.Interfaces.ICommands;
 using AppointmentBooking.Application.Shared.Interfaces.IQueries;
-using DoctorAvailability.Public.DTOs.Response;
-
+using DoctorAvailability.Shared.DTOs.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppointmentBooking.API;
