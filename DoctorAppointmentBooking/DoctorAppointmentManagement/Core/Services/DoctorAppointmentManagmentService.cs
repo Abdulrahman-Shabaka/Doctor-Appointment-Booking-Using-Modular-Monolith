@@ -12,4 +12,14 @@ internal class DoctorAppointmentManagementService(IAppointmentService appointmen
 
         return appointments;
     }
+
+    public async Task CompleteAppointmentAsync(CompleteAppointmentDto request)
+    {
+        await appointmentService.CompleteAppointmentAsync(request);
+    }
+
+    public async Task CancelAppointmentAsync(CancelAppointmentDto request)
+    {
+        await appointmentService.CancelAppointmentAsync(request);
+    }
 }

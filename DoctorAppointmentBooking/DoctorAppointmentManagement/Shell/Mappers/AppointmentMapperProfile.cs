@@ -1,4 +1,5 @@
-﻿using AppointmentBooking.Application.Shared.DTOs.Responses;
+﻿using AppointmentBooking.Application.Shared.DTOs.Requests;
+using AppointmentBooking.Application.Shared.DTOs.Responses;
 
 using AutoMapper;
 
@@ -11,5 +12,7 @@ public class AppointmentMapperProfile : Profile
     public AppointmentMapperProfile()
     {
         CreateMap<AppointmentResponse, AppointmentDto>();
+        CreateMap<CompleteAppointmentDto, CompleteAppointmentRequest>();
+        CreateMap<CancelAppointmentDto, CancelAppointmentRequest>();
     }
 }

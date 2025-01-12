@@ -15,4 +15,18 @@ public class DoctorAppointmentManagementController(IDoctorAppointmentManagementS
         var appointments = await doctorAppointmentManagementService.GetUpcomingAppointmentsAsync();
         return Ok(appointments);
     }
+
+    [HttpPost("complete-appointment")]
+    public async Task<ActionResult> CompleteAppointments([FromBody] CompleteAppointmentDto request)
+    {
+        await doctorAppointmentManagementService.CompleteAppointmentAsync(request);
+        return Ok();
+    }
+
+    [HttpPost("cancel-appointment")]
+    public async Task<ActionResult> CancelAppointments([FromBody] CancelAppointmentDto request)
+    {
+        await doctorAppointmentManagementService.CancelAppointmentAsync(request);
+        return Ok();
+    }
 }

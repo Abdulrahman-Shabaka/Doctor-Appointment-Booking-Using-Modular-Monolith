@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <Folder Include="Core\InputPorts\" />
-      <Folder Include="Core\DTOs\" />
       <Folder Include="Core\OutputPorts\" />
       <Folder Include="Core\Services\" />
       <Folder Include="Shell\API\" />
