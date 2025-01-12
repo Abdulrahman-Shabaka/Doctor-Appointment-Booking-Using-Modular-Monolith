@@ -1,8 +1,8 @@
 ﻿using AppointmentBooking.Application.Shared.Events;
 
-namespace AppointmentConfirmation.Internal.EventHandlers;
+namespace AppointmentConfirmation.EventHandlers;
 
-internal class AppointmentBookedEventHandler 
+internal class AppointmentBookedEventHandler
 {
     public void Handle(AppointmentBookedEvent @event)
     {
