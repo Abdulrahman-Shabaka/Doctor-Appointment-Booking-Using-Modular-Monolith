@@ -1,4 +1,4 @@
-﻿using AppointmentBooking.Public.Interfaces;
+﻿using AppointmentBooking.Public.Interfaces.IQueries;
 using DoctorAvailability.Public.DTOs.Response;
 using DoctorAvailability.Public.Interfaces;
 

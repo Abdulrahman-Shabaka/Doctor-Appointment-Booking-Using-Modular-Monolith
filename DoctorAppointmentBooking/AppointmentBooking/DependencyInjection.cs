@@ -3,7 +3,8 @@ using AppointmentBooking.Internal.Application.UseCases.Query;
 using AppointmentBooking.Internal.Domain.Interfaces;
 using AppointmentBooking.Internal.Infrastructure;
 using AppointmentBooking.Internal.Infrastructure.Repositories;
-using AppointmentBooking.Public.Interfaces;
+using AppointmentBooking.Public.Interfaces.ICommands;
+using AppointmentBooking.Public.Interfaces.IQueries;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,11 @@ public static class DependencyInjection
     public static IServiceCollection AddAppointmentBookingModule(this IServiceCollection services)
     {
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+
         services.AddScoped<IBookAppointmentCommand, BookAppointmentCommandHandler>();
+        services.AddScoped<ICompleteAppointmentCommand, CompleteAppointmentCommand>();
+        services.AddScoped<ICancelAppointmentCommand, CancelAppointmentCommand>();
+
         services.AddScoped<IAvailableSlotsQuery, AvailableSlotsQueryHandler>();
 
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

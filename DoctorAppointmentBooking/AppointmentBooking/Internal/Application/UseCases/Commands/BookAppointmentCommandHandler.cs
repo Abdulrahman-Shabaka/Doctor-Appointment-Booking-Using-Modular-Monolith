@@ -3,8 +3,7 @@ using AppointmentBooking.Internal.Domain.Models;
 using AppointmentBooking.Public.DTOs.Requests;
 using AppointmentBooking.Public.DTOs.Responses;
 using AppointmentBooking.Public.Events;
-using AppointmentBooking.Public.Interfaces;
-
+using AppointmentBooking.Public.Interfaces.ICommands;
 using AutoMapper;
 
 using DoctorAvailability.Public.Interfaces;

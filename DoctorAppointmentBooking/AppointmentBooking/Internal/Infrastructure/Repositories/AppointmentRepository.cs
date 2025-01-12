@@ -12,6 +12,11 @@ internal class AppointmentRepository(AppointmentDbContext dbContext) : IAppointm
        await dbContext.AddAsync(appointment);
     }
 
+    public async Task<Appointment?> GetAppointmentByIdAsync(Guid id)
+    {
+        return await dbContext.Set<Appointment>().FindAsync(id);
+    }
+
     public async Task<List<Appointment>> GetAppointmentsByPatientIdAsync(Guid patientId)
     {
         return await dbContext.Set<Appointment>()

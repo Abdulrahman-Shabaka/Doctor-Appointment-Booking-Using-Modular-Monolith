@@ -1,6 +1,6 @@
 ﻿using DoctorAvailability.Public.DTOs.Response;
 
-namespace AppointmentBooking.Public.Interfaces;
+namespace AppointmentBooking.Public.Interfaces.IQueries;
 
 public interface IAvailableSlotsQuery
 {
