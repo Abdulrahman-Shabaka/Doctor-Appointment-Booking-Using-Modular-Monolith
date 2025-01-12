@@ -18,10 +18,3 @@ internal class Appointment
     public void Complete() => State = AppointmentState.Completed;
     public void Cancel() => State = AppointmentState.Canceled;
 }
-
-internal enum AppointmentState
-{
-    New = 1,
-    Completed = 2,
-    Canceled = 3,
-}
