@@ -8,10 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Public\Events\" />
-      <Folder Include="Internal\Application\UseCases\Commands\" />
-      <Folder Include="Internal\Domain\Models\" />
-      <Folder Include="Public\API\" />
+      <Folder Include="Application\Shared\Events\" />
+      <Folder Include="API\" />
     </ItemGroup>
 
     <ItemGroup>

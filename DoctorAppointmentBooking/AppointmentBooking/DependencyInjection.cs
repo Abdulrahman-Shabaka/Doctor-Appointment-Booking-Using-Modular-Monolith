@@ -1,11 +1,10 @@
-﻿using AppointmentBooking.Internal.Application.UseCases.Commands;
-using AppointmentBooking.Internal.Application.UseCases.Query;
-using AppointmentBooking.Internal.Domain.Interfaces;
-using AppointmentBooking.Internal.Infrastructure;
-using AppointmentBooking.Internal.Infrastructure.Repositories;
-using AppointmentBooking.Public.Interfaces.ICommands;
-using AppointmentBooking.Public.Interfaces.IQueries;
-
+﻿using AppointmentBooking.Application.Shared.Interfaces.ICommands;
+using AppointmentBooking.Application.Shared.Interfaces.IQueries;
+using AppointmentBooking.Application.UseCases.Commands;
+using AppointmentBooking.Application.UseCases.Query;
+using AppointmentBooking.Domain.Interfaces;
+using AppointmentBooking.Infrastructure;
+using AppointmentBooking.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

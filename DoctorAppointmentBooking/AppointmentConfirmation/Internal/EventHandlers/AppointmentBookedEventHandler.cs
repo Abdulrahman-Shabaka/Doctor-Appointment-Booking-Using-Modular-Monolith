@@ -1,4 +1,4 @@
-﻿using AppointmentBooking.Public.Events;
+﻿using AppointmentBooking.Application.Shared.Events;
 
 namespace AppointmentConfirmation.Internal.EventHandlers;
 
