@@ -3,6 +3,6 @@
 internal enum AppointmentState
 {
     New = 1,
-    Completed = 2,
-    Canceled = 3,
+    Canceled = 2,
+    Completed = 3,
 }

@@ -15,6 +15,13 @@ internal class Appointment
     public AppointmentState State { get; set; }
     public DateTime ReservedAt { get; set; }
 
-    public void Complete() => State = AppointmentState.Completed;
+    public void Complete()
+    {
+        if(State is AppointmentState.Canceled)
+            throw new InvalidOperationException("Cannot complete a cancelled appointment.");
+
+        State = AppointmentState.Completed;
+    }
+
     public void Cancel() => State = AppointmentState.Canceled;
 }
