@@ -2,8 +2,8 @@
 
 using DoctorAvailability.Internal.Models;
 using DoctorAvailability.Public.DTOs.Requests;
+using DoctorAvailability.Public.DTOs.Response;
 using DoctorAvailability.Public.Interfaces;
-using DoctorAvailability.Public.Response;
 
 namespace DoctorAvailability.Internal.Services;
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using DoctorAvailability.Public.DTOs.Requests;
+using DoctorAvailability.Public.DTOs.Response;
 using DoctorAvailability.Public.Interfaces;
-using DoctorAvailability.Public.Response;
 
 using Microsoft.AspNetCore.Mvc;
 

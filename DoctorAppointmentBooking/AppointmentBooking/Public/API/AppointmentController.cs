@@ -1,8 +1,7 @@
 ﻿using AppointmentBooking.Public.DTOs.Requests;
 using AppointmentBooking.Public.DTOs.Responses;
 using AppointmentBooking.Public.Interfaces;
-
-using DoctorAvailability.Public.Response;
+using DoctorAvailability.Public.DTOs.Response;
 
 using Microsoft.AspNetCore.Mvc;
 

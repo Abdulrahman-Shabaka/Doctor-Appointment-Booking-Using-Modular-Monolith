@@ -1,4 +1,4 @@
-﻿using DoctorAvailability.Public.Response;
+﻿using DoctorAvailability.Public.DTOs.Response;
 
 namespace AppointmentBooking.Public.Interfaces;
 

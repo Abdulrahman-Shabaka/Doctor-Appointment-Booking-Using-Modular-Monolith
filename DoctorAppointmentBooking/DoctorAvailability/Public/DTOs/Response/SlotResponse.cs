@@ -1,4 +1,4 @@
-﻿namespace DoctorAvailability.Public.Response;
+﻿namespace DoctorAvailability.Public.DTOs.Response;
 
 public class SlotResponse
 {

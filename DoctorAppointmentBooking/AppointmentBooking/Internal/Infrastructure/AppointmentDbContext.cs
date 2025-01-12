@@ -1,4 +1,5 @@
 ﻿using AppointmentBooking.Internal.Domain.Models;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentBooking.Internal.Infrastructure;

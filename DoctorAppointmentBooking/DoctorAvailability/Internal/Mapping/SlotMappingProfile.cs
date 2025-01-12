@@ -2,7 +2,7 @@
 
 using DoctorAvailability.Internal.Models;
 using DoctorAvailability.Public.DTOs.Requests;
-using DoctorAvailability.Public.Response;
+using DoctorAvailability.Public.DTOs.Response;
 
 namespace DoctorAvailability.Internal.Mapping;
 

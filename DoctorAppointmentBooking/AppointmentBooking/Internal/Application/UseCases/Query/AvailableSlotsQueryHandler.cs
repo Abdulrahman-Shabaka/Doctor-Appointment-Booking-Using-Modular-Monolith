@@ -1,7 +1,6 @@
 ﻿using AppointmentBooking.Public.Interfaces;
-
+using DoctorAvailability.Public.DTOs.Response;
 using DoctorAvailability.Public.Interfaces;
-using DoctorAvailability.Public.Response;
 
 namespace AppointmentBooking.Internal.Application.UseCases.Query;
 
