@@ -1,4 +1,4 @@
-﻿namespace DoctorAvailability.Internal.Models;
+﻿namespace DoctorAvailability.Models;
 
 internal interface ISlotRepository
 {

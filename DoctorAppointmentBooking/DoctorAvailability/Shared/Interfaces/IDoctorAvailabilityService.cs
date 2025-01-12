@@ -1,7 +1,7 @@
-﻿using DoctorAvailability.Public.DTOs.Requests;
-using DoctorAvailability.Public.DTOs.Response;
+﻿using DoctorAvailability.Shared.DTOs.Requests;
+using DoctorAvailability.Shared.DTOs.Response;
 
-namespace DoctorAvailability.Public.Interfaces;
+namespace DoctorAvailability.Shared.Interfaces;
 
 public interface IDoctorAvailabilityService
 {

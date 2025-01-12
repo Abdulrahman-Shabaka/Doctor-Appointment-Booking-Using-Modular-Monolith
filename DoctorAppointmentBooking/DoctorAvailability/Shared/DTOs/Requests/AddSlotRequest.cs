@@ -1,4 +1,4 @@
-﻿namespace DoctorAvailability.Public.DTOs.Requests;
+﻿namespace DoctorAvailability.Shared.DTOs.Requests;
 
 public class AddSlotRequest
 {

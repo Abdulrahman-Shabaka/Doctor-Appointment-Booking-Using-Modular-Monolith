@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using DoctorAvailability.Public.DTOs.Requests;
-using DoctorAvailability.Public.DTOs.Response;
-using DoctorAvailability.Public.Interfaces;
-
+using DoctorAvailability.Shared.DTOs.Requests;
+using DoctorAvailability.Shared.DTOs.Response;
+using DoctorAvailability.Shared.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DoctorAvailability.Public.API;
+namespace DoctorAvailability.API;
 
 [ApiController]
 [Route("api/doctor-availabilities")]

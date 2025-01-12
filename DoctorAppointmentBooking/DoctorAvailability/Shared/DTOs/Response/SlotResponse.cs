@@ -1,10 +1,9 @@
-﻿namespace DoctorAvailability.Internal.Models;
+﻿namespace DoctorAvailability.Shared.DTOs.Response;
 
-internal class Slot
+public class SlotResponse
 {
     public Guid Id { get; set; }
     public DateTime Time { get; set; }
-    public Guid DoctorId { get; set; }
     public string DoctorName { get; set; }
     public bool IsReserved { get; set; }
     public decimal Cost { get; set; }

@@ -1,8 +1,7 @@
-﻿using DoctorAvailability.Internal.Models;
-
+﻿using DoctorAvailability.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DoctorAvailability.Internal.Data;
+namespace DoctorAvailability.Data;
 
 internal class DoctorAvailabilityDbContext(DbContextOptions<DoctorAvailabilityDbContext> options) : DbContext(options)
 {

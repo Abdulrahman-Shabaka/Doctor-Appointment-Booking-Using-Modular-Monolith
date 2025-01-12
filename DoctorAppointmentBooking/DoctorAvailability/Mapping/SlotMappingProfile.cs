@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
+using DoctorAvailability.Models;
+using DoctorAvailability.Shared.DTOs.Requests;
+using DoctorAvailability.Shared.DTOs.Response;
 
-using DoctorAvailability.Internal.Models;
-using DoctorAvailability.Public.DTOs.Requests;
-using DoctorAvailability.Public.DTOs.Response;
-
-namespace DoctorAvailability.Internal.Mapping;
+namespace DoctorAvailability.Mapping;
 
 internal class SlotMappingProfile : Profile
 {

@@ -1,8 +1,8 @@
-﻿using DoctorAvailability.Internal.Data;
-using DoctorAvailability.Internal.Data.Repositories;
-using DoctorAvailability.Internal.Models;
-using DoctorAvailability.Internal.Services;
-using DoctorAvailability.Public.Interfaces;
+﻿using DoctorAvailability.Data;
+using DoctorAvailability.Data.Repositories;
+using DoctorAvailability.Models;
+using DoctorAvailability.Services;
+using DoctorAvailability.Shared.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
