@@ -6,4 +6,22 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Core\InputPorts\" />
+      <Folder Include="Core\DTOs\" />
+      <Folder Include="Core\OutputPorts\" />
+      <Folder Include="Core\Services\" />
+      <Folder Include="Shell\API\" />
+      <Folder Include="Shell\Mappers\" />
+      <Folder Include="Shell\Services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AppointmentBooking\AppointmentBooking.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,5 +1,6 @@
 ﻿using AppointmentBooking.Application.Shared.Events;
-using AppointmentConfirmation.Internal.EventHandlers;
+
+using AppointmentConfirmation.EventHandlers;
 
 using Microsoft.Extensions.DependencyInjection;
 
