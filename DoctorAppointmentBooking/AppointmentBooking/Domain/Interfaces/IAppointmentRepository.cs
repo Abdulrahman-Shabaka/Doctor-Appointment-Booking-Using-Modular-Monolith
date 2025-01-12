@@ -8,4 +8,5 @@ internal interface IAppointmentRepository
     Task<Appointment?> GetAppointmentByIdAsync(Guid id);
     Task<List<Appointment>> GetAppointmentsByPatientIdAsync(Guid patientId);
     Task SaveChangesAsync();
+    Task<List<Appointment>> GetUpcomingAppointmentAsync();
 }

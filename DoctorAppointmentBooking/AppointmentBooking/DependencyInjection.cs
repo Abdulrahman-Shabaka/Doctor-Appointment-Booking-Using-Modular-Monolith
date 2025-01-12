@@ -5,6 +5,7 @@ using AppointmentBooking.Application.UseCases.Query;
 using AppointmentBooking.Domain.Interfaces;
 using AppointmentBooking.Infrastructure;
 using AppointmentBooking.Infrastructure.Repositories;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +22,7 @@ public static class DependencyInjection
         services.AddScoped<ICancelAppointmentCommand, CancelAppointmentCommand>();
 
         services.AddScoped<IAvailableSlotsQuery, AvailableSlotsQueryHandler>();
+        services.AddScoped<IGetUpcomingAppointmentQuery, GetUpcomingAppointmentQueryQueryHandler>();
 
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

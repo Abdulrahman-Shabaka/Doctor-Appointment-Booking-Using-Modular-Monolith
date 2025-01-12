@@ -1,6 +1,6 @@
 ﻿using AppointmentBooking.Domain.Interfaces;
 using AppointmentBooking.Domain.Models;
-using AppointmentBooking.Infrastructure;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentBooking.Infrastructure.Repositories;
@@ -27,5 +27,12 @@ internal class AppointmentRepository(AppointmentDbContext dbContext) : IAppointm
     public async Task SaveChangesAsync()
     {
         await dbContext.SaveChangesAsync();
+    }
+
+    public async Task<List<Appointment>> GetUpcomingAppointmentAsync()
+    {
+        return await dbContext.Set<Appointment>()
+            .Where(a => a.ReservedAt >= DateTime.Today)
+            .ToListAsync();
     }
 }
