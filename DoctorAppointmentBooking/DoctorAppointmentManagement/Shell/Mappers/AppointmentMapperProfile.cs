@@ -7,7 +7,7 @@ using DoctorAppointmentManagement.Core.DTOs;
 
 namespace DoctorAppointmentManagement.Shell.Mappers;
 
-public class AppointmentMapperProfile : Profile
+internal class AppointmentMapperProfile : Profile
 {
     public AppointmentMapperProfile()
     {
